@@ -1,4 +1,3 @@
-# MonBondhu
 # MonBondhu — Your Community Health Companion
 
 ## Project Overview
