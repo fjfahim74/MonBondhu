@@ -3,7 +3,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import { createRecognizer, inferIntent, speakBn, isSpeechRecognitionSupported } from "@/lib/voice";
 
-export default function AssistantPage({ searchParams }: { searchParams?: Record<string,string> }) {
+export default function AssistantPage({ searchParams }: { searchParams?: Record<string, string> }) {
   const router = useRouter();
   const [listening, setListening] = React.useState(false);
   const [transcript, setTranscript] = React.useState("");
@@ -48,7 +48,7 @@ export default function AssistantPage({ searchParams }: { searchParams?: Record<
     rec.onresult = onResult;
     rec.onerror = () => setListening(false);
     rec.onend = onEnd;
-    try { rec.start(); } catch {}
+    try { rec.start(); } catch { }
   }, [onEnd, onResult]);
 
   const stop = React.useCallback(() => { recRef.current?.stop?.(); }, []);
@@ -87,14 +87,14 @@ export default function AssistantPage({ searchParams }: { searchParams?: Record<
           <button onClick={stop} className="px-5 py-2.5 rounded-lg bg-neutral-200 dark:bg-neutral-700 text-neutral-800 dark:text-neutral-100 text-sm font-medium shadow transition active:scale-[.97]">Stop</button>
           <span className={`text-sm font-medium ${listening ? 'text-green-600 dark:text-green-400' : 'text-neutral-500 dark:text-neutral-400'}`}>{listening ? 'শুনছে…' : 'নিষ্ক্রিয়'}</span>
         </div>
-        <form onSubmit={handleManual} className="mb-6 flex gap-3 items-stretch">
+        <form onSubmit={handleManual} className="mb-6 flex flex-col sm:flex-row gap-3">
           <input
             value={transcript}
             onChange={e => setTranscript(e.target.value)}
             placeholder="আপনার বার্তা লিখুন বা বলুন..."
             className="flex-1 rounded-xl border border-neutral-300 dark:border-neutral-600 bg-white/60 dark:bg-neutral-900/60 px-4 py-3 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-500/50 shadow-inner"
           />
-          <button type="submit" className="px-6 py-3 rounded-xl bg-primary text-white text-sm md:text-base font-semibold shadow hover:shadow-md transition active:scale-[.97]">পাঠান</button>
+          <button type="submit" className="px-6 py-3 rounded-xl bg-primary text-white text-sm md:text-base font-semibold shadow hover:shadow-md transition active:scale-[.97] whitespace-nowrap">পাঠান</button>
         </form>
         <div className="space-y-3 min-h-[100px] mb-4">
           {transcript && (

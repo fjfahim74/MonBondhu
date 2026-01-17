@@ -20,18 +20,18 @@ export default function FacilityMap({ height = 360 }: Props) {
   const [userLoc, setUserLoc] = React.useState<LatLng | null>(null);
   const [nearest, setNearest] = React.useState<(Facility & { distanceKm: number })[]>([]);
   const mapRef = React.useRef<LeafletMap | null>(null);
-  
+
   // Gate initial render to client after first mount to prevent double Leaflet init
   const [mounted, setMounted] = React.useState(false);
   React.useEffect(() => { setMounted(true); }, []);
-  
+
   // Curated hospital links requested by user
   const curatedHospitals = React.useMemo(() => [
     { id: "emc-comilla", nameBn: "ইস্টার্ন মেডিকেল কলেজ এন্ড হাসপাতাল", url: "https://maps.app.goo.gl/rDvuCSy3w3tvQQng6" },
     { id: "mainamati-gen", nameBn: "ময়নামতি ক্যান্টনমেন্ট জেনারেল হসপিটাল", url: "https://maps.app.goo.gl/B5pXDFqckcuHgDD98" },
     { id: "cmh-comilla", nameBn: "সম্মিলিত সামরিক হাসপাতাল (সিএমএইচ),কুমিল্লা", url: "https://maps.app.goo.gl/namGpAqUzY8W7yJN9" },
   ], []);
-  
+
   // Clean up any prior Leaflet instance left by React 18 strict double-mount (dev mode) before first real mount
   const containerRef = React.useRef<HTMLDivElement | null>(null);
   React.useEffect(() => {

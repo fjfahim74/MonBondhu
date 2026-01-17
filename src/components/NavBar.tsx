@@ -14,10 +14,15 @@ export function NavBar() {
             <span className="text-2xl">🌿</span>
             <span>মনবন্ধু</span>
           </Link>
+        </div>
+        {/* Mobile: Voice + Theme + Hamburger */}
+        <div className="md:hidden flex items-center gap-2">
+          <VoiceAssistant />
+          <ThemeToggle />
           <button
             aria-label="Toggle menu"
             onClick={() => setOpen(o => !o)}
-            className="md:hidden rounded-lg p-2 border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
+            className="rounded-lg p-2 border border-neutral-300 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
           >
             {open ? '✕' : '☰'}
           </button>
@@ -111,10 +116,6 @@ export function NavBar() {
             </svg>
             পরামর্শ
           </Link>
-          <div className="flex items-center gap-3 pt-2 border-t border-neutral-200 dark:border-neutral-800">
-            <VoiceAssistant />
-            <ThemeToggle />
-          </div>
         </div>
       )}
     </header>

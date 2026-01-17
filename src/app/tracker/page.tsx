@@ -18,9 +18,9 @@ export default function Page() {
       <TrackerManager />
       <div id="facility-map" className="mt-10 space-y-4">
         <h2 className="text-lg font-semibold">নিকটস্থ স্বাস্থ্যসেবা</h2>
-        <a 
-          href="https://www.google.com/maps/search/hospitals+near+me" 
-          target="_blank" 
+        <a
+          href="https://www.google.com/maps/search/hospitals+near+me"
+          target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium"
         >
