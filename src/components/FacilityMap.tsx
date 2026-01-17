@@ -13,81 +13,6 @@ const MapRefBridge: React.FC<{ onReady: (map: LeafletMap) => void }> = ({ onRead
   return null;
 };
 
-// Hover-to-pan map controller
-const HoverPanController: React.FC = () => {
-  const map = useMap();
-  const [mousePos, setMousePos] = React.useState<{ x: number; y: number } | null>(null);
-  const animFrameRef = React.useRef<number | null>(null);
-
-  React.useEffect(() => {
-    const container = map.getContainer();
-
-    const handleMouseMove = (e: MouseEvent) => {
-      const rect = container.getBoundingClientRect();
-      setMousePos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
-    };
-
-    const handleMouseLeave = () => {
-      setMousePos(null);
-    };
-
-    container.addEventListener('mousemove', handleMouseMove);
-    container.addEventListener('mouseleave', handleMouseLeave);
-
-    return () => {
-      container.removeEventListener('mousemove', handleMouseMove);
-      container.removeEventListener('mouseleave', handleMouseLeave);
-      if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
-    };
-  }, [map]);
-
-  React.useEffect(() => {
-    if (!mousePos) {
-      if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
-      return;
-    }
-
-    const animate = () => {
-      const container = map.getContainer();
-      const width = container.offsetWidth;
-      const height = container.offsetHeight;
-
-      const edgeThreshold = 100; // pixels from edge to start panning
-      const maxSpeed = 3; // max pixels to pan per frame
-
-      let dx = 0;
-      let dy = 0;
-
-      // Calculate panning speed based on distance from edges
-      if (mousePos.x < edgeThreshold) {
-        dx = -maxSpeed * (1 - mousePos.x / edgeThreshold);
-      } else if (mousePos.x > width - edgeThreshold) {
-        dx = maxSpeed * (1 - (width - mousePos.x) / edgeThreshold);
-      }
-
-      if (mousePos.y < edgeThreshold) {
-        dy = -maxSpeed * (1 - mousePos.y / edgeThreshold);
-      } else if (mousePos.y > height - edgeThreshold) {
-        dy = maxSpeed * (1 - (height - mousePos.y) / edgeThreshold);
-      }
-
-      if (dx !== 0 || dy !== 0) {
-        map.panBy([dx, dy], { animate: false });
-      }
-
-      animFrameRef.current = requestAnimationFrame(animate);
-    };
-
-    animFrameRef.current = requestAnimationFrame(animate);
-
-    return () => {
-      if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
-    };
-  }, [mousePos, map]);
-
-  return null;
-};
-
 type Props = { height?: number };
 
 export default function FacilityMap({ height = 360 }: Props) {
@@ -172,7 +97,6 @@ export default function FacilityMap({ height = 360 }: Props) {
             attributionControl={true}
           >
             <MapRefBridge onReady={(m) => { mapRef.current = m; }} />
-            <HoverPanController />
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
