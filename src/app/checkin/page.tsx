@@ -45,8 +45,8 @@ export default function Page() {
         </div>
         <div className="grid sm:grid-cols-2 gap-3">
           {CrisisNumbers.map((c) => (
-            <a 
-              key={c.label} 
+            <a
+              key={c.label}
               href={`tel:${c.phone}`}
               className="flex items-center justify-between rounded-lg border-2 border-red-300 dark:border-red-700 bg-white dark:bg-neutral-800 p-3 hover:shadow-md transition-all hover:border-red-400 dark:hover:border-red-600"
             >

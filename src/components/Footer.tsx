@@ -12,23 +12,23 @@ export function Footer() {
               <span>মনবন্ধু</span>
             </Link>
             <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-2 max-w-md">
-              গ্রামীণ বাংলাদেশের জন্য মানসিক স্বাস্থ্য ও কমিউনিটি সহায়তা প্ল্যাটফর্ম। 
+              গ্রামীণ বাংলাদেশের জন্য মানসিক স্বাস্থ্য ও কমিউনিটি সহায়তা প্ল্যাটফর্ম।
               আপনার মন ভালো রাখতে আমরা আছি পাশে।
             </p>
             <p className="text-xs text-neutral-500 dark:text-neutral-500 mb-4 max-w-md">
-              মনবন্ধু একটি অলাভজনক উদ্যোগ যা গ্রামীণ বাংলাদেশে মানসিক স্বাস্থ্য সেবা সহজলভ্য করতে কাজ করছে। 
+              মনবন্ধু একটি অলাভজনক উদ্যোগ যা গ্রামীণ বাংলাদেশে মানসিক স্বাস্থ্য সেবা সহজলভ্য করতে কাজ করছে।
               আমরা বিশ্বাস করি প্রত্যেকেরই মানসিক স্বাস্থ্য সহায়তা পাওয়ার অধিকার রয়েছে।
             </p>
             <div className="flex gap-3">
               <a href="tel:09638000000" className="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 flex items-center justify-center hover:bg-primary-200 dark:hover:bg-primary-800 transition-colors" aria-label="Phone">
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
                 </svg>
               </a>
               <a href="mailto:support@monbondhu.org" className="w-10 h-10 rounded-full bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 flex items-center justify-center hover:bg-primary-200 dark:hover:bg-primary-800 transition-colors" aria-label="Email">
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                  <path d="M22 6l-10 7L2 6"/>
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <path d="M22 6l-10 7L2 6" />
                 </svg>
               </a>
             </div>
@@ -58,7 +58,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-neutral-200 dark:border-neutral-800 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-600 dark:text-neutral-400">
-          <p>© {new Date().getFullYear()} মনবন্ধু। সর্বস্বত্ব সংরক্ষিত।</p>
+          <p>© {new Date().getFullYear()} মনবন্ধু। সর্বস্বত্ব সংরক্ষিত। Developed by <span className="font-semibold text-primary-600 dark:text-primary-400">AlgoNova 2.0</span></p>
           <div className="flex gap-4">
             <Link href="#" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">গোপনীয়তা নীতি</Link>
             <Link href="#" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">শর্তাবলী</Link>

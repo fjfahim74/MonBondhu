@@ -8,20 +8,20 @@ export interface FeedItem {
 export const feed: FeedItem[] = [
   {
     id: '1',
-    author: 'Alex Johnson',
-    content: 'Just launched a new Next.js project with Tailwind! Loving the DX and performance.',
-    time: '2h',
+    author: 'রহিম আহমেদ',
+    content: 'আজ মনটা অনেক ভালো লাগছে। মেডিটেশন করার পর থেকে মনের শান্তি অনুভব করছি। সবাইকে নিয়মিত ব্যায়াম করার পরামর্শ দেবো।',
+    time: '২ ঘন্টা আগে',
   },
   {
     id: '2',
-    author: 'Priya Singh',
-    content: 'Dark mode toggle wired up with class strategy and localStorage persistence. Clean and simple.',
-    time: '5h',
+    author: 'সায়মা খাতুন',
+    content: 'গ্রামে আমাদের স্বাস্থ্যকর্মী দিদি আজ এসেছিলেন। মানসিক স্বাস্থ্য নিয়ে অনেক কিছু শিখলাম। ধন্যবাদ মনবন্ধু!',
+    time: '৫ ঘন্টা আগে',
   },
   {
     id: '3',
-    author: 'Diego Martinez',
-    content: 'Tip: Use zod schemas on both client and server to keep validation consistent.',
-    time: '1d',
+    author: 'করিম মিয়া',
+    content: 'পরিবারের সাথে সময় কাটানো মানসিক স্বাস্থ্যের জন্য খুবই জরুরি। আজ বাচ্চাদের সাথে খেলতে পেরে অনেক আনন্দ পেয়েছি।',
+    time: '১ দিন আগে',
   },
 ];

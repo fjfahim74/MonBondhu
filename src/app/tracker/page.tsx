@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/Container";
 import TrackerManager from "@/components/TrackerManager";
-import FacilityMap from "@/components/FacilityMap";
+import FacilityMapWrapper from "@/components/FacilityMapWrapper";
 import OfflineIndicator from "@/components/OfflineIndicator";
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function Page() {
       <div id="facility-map" className="mt-10 space-y-4">
         <h2 className="text-lg font-semibold">নিকটস্থ স্বাস্থ্যসেবা মানচিত্র</h2>
         <p className="text-sm text-neutral-600 dark:text-neutral-400">আপনার অনুমতি পেলে লোকেশন ব্যবহার করে কাছের সেবাস্থল দেখায়। ডেটা শুধুমাত্র আপনার ডিভাইসে ব্যবহৃত হয়।</p>
-        <FacilityMap height={400} />
+        <FacilityMapWrapper height={400} />
       </div>
     </Container>
   );

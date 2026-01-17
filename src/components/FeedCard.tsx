@@ -8,7 +8,7 @@ export function FeedCard({ item }: { item: FeedItem }) {
         <Avatar name={item.author} />
         <div>
           <div className="font-medium leading-tight">{item.author}</div>
-          <div className="text-xs text-neutral-500">{item.time} ago</div>
+          <div className="text-xs text-neutral-500">{item.time}</div>
         </div>
       </header>
       <p className="text-sm leading-relaxed">{item.content}</p>

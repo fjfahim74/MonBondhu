@@ -16,11 +16,11 @@ export default function HomePage() {
               মানসিক সুস্বাস্থ্য সহায়তা
             </span>
           </div>
-          <h1 className="text-5xl font-bold tracking-tight bg-gradient-to-r from-primary-700 to-primary-900 dark:from-primary-400 dark:to-primary-600 bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold tracking-tight bg-gradient-to-r from-primary-700 to-primary-900 dark:from-primary-400 dark:to-primary-600 bg-clip-text text-transparent leading-tight pb-2">
             মনবন্ধু - আপনার মনের সঙ্গী
           </h1>
           <p className="text-lg text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto leading-relaxed">
-            গ্রামীণ বাংলাদেশের জন্য ডিজাইন করা একটি সম্পূর্ণ মানসিক স্বাস্থ্য প্ল্যাটফর্ম। 
+            গ্রামীণ বাংলাদেশের জন্য ডিজাইন করা একটি সম্পূর্ণ মানসিক স্বাস্থ্য প্ল্যাটফর্ম।
             আপনার মুড ট্র্যাক করুন, সহায়তা পান, এবং কমিউনিটি হেলথ ওয়ার্কারদের সাথে সংযুক্ত হন।
           </p>
           <div className="flex justify-center gap-4 flex-wrap">

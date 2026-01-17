@@ -7,28 +7,28 @@ const config: Config = {
     extend: {
       colors: {
         // Professional nature-inspired palette for rural Bangladesh
-        primary: { 
+        primary: {
           DEFAULT: '#16a34a', // Fresh green
-          50: '#f0fdf4', 
-          100: '#dcfce7', 
+          50: '#f0fdf4',
+          100: '#dcfce7',
           200: '#bbf7d0',
           300: '#86efac',
           400: '#4ade80',
           500: '#22c55e',
-          600: '#16a34a', 
+          600: '#16a34a',
           700: '#15803d',
           800: '#166534',
           900: '#14532d',
           950: '#052e16'
         },
-        secondary: { 
+        secondary: {
           DEFAULT: '#0891b2', // Calm teal
           50: '#ecfeff',
           100: '#cffafe',
           600: '#0891b2',
           700: '#0e7490'
         },
-        accent: { 
+        accent: {
           DEFAULT: '#f59e0b', // Warm amber
           50: '#fffbeb',
           100: '#fef3c7',
