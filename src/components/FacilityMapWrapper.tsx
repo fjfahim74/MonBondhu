@@ -1,7 +1,7 @@
 "use client";
 import dynamic from "next/dynamic";
 
-const FacilityMap = dynamic(() => import("@/components/FacilityMap"), {
+const FacilityMap = dynamic(() => import("@/components/FacilityMap").then(mod => mod.default), {
   ssr: false,
   loading: () => <div className="h-[400px] rounded-md border flex items-center justify-center text-neutral-500">মানচিত্র লোড হচ্ছে...</div>
 });
