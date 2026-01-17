@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import "leaflet/dist/leaflet.css";
 import type { Map as LeafletMap } from "leaflet";
 import { rankNearest, LatLng } from "@/lib/geo";
 import { Facility } from "@/lib/facilities";
@@ -86,9 +87,6 @@ const HoverPanController: React.FC = () => {
 
   return null;
 };
-
-// Import Leaflet CSS on client
-import "leaflet/dist/leaflet.css";
 
 type Props = { height?: number };
 
