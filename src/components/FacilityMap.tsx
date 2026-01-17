@@ -92,7 +92,7 @@ import "leaflet/dist/leaflet.css";
 
 type Props = { height?: number };
 
-const FacilityMap: React.FC<Props> = ({ height = 360 }) => {
+export default function FacilityMap({ height = 360 }: Props) {
   const [facilities, setFacilities] = React.useState<Facility[]>([]);
   const [userLoc, setUserLoc] = React.useState<LatLng | null>(null);
   const [nearest, setNearest] = React.useState<(Facility & { distanceKm: number })[]>([]);
@@ -237,6 +237,4 @@ const FacilityMap: React.FC<Props> = ({ height = 360 }) => {
       </div>
     </div>
   );
-};
-
-export default FacilityMap;
+}
