@@ -1,61 +1,149 @@
-# মনবন্ধু (MonBondhu)
+# 💙 মনবন্ধু (MonBondhu)
 
-একটি Next.js (App Router) + TypeScript + Tailwind CSS ভিত্তিক অ্যাপ স্টার্টার—বাংলাভাষী ব্যবহারকারীদের জন্য মানসিক সুস্বাস্থ্য ও কমিউনিটি হেলথ সহায়তা কেন্দ্রিক ডেমো।
+> **A Bengali-first mental wellness and community health support platform designed to provide accessible, supportive, and privacy-conscious resources for Bengali-speaking users.**
 
-## Features
-- Next.js App Router, strict TypeScript
-- Tailwind CSS with custom theme and typography plugin
-- Dark mode toggle with persistence
-- Mock blog (static index + dynamic route)
-- API route with Zod validation (`/api/contact`)
-- Jest + Testing Library setup
-- ESLint + Prettier
+---
 
-## Requirements
+## 📌 Overview
+
+**মনবন্ধু (MonBondhu)** is a Bengali-focused web application built around mental wellness and community health support.
+
+The platform provides a simple and accessible experience with features such as mood tracking, supportive content, a blog, dark mode, and easily accessible crisis resources.
+
+> **Privacy & Safety:** Mood data is stored locally on the user's device. Crisis contacts are clearly visible, and the application includes a disclaimer that it does not provide medical advice.
+
+---
+
+## 🌐 Live Demo
+
+👉 **[Visit MonBondhu](https://mon-bondhu.vercel.app/)**
+
+---
+
+## 📸 Screenshot
+
+### Home Page
+
+![MonBondhu Home Page](docs/screenshots/home.png)
+
+## ✨ Features
+
+- 🇧🇩 **Bengali-first Interface** — Designed primarily for Bengali-speaking users.
+- 😊 **Mood Tracking** — Track mood information locally on the device.
+- 📝 **Supportive Blog** — Browse mental wellness and community health content.
+- 🌙 **Dark Mode** — Toggle between light and dark themes with preference persistence.
+- 📱 **Responsive Design** — Designed for different screen sizes.
+- 📩 **Contact API** — API route with Zod input validation.
+- 🛡️ **Privacy & Safety** — Local mood storage, visible crisis contacts, and safety disclaimer.
+
+---
+
+## 🛠️ Technologies
+
+- **Next.js** — App Router
+- **TypeScript** — Strict type checking
+- **Tailwind CSS** — Styling and custom theme
+- **Zod** — API validation
+- **Jest** — Testing
+- **React Testing Library** — Component testing
+- **ESLint & Prettier** — Code quality and formatting
+
+---
+
+## 📦 Requirements
+
 - Node.js 18+
-- npm (or your preferred package manager)
+- npm
 
-## Install and run (Windows PowerShell)
-```powershell
-# Install dependencies
+---
+
+## 🚀 Local Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/fjfahim74/MonBondhu.git
+cd MonBondhu
+```
+
+### 2. Install dependencies
+
+```bash
 npm install
+```
 
-# Run the dev server
+### 3. Start the development server
+
+```bash
 npm run dev
+```
 
-# Lint, test, type-check
+Open `http://localhost:3000` in your browser.
+
+### 4. Run checks
+
+```bash
 npm run lint
 npm test
 npm run type-check
+```
 
-# Build and start
+### 5. Build for production
+
+```bash
 npm run build
 npm start
 ```
 
-## Project structure (high level)
-- `src/app` — App Router pages and API routes
-- `src/components` — Reusable UI components
-- `src/lib` — Utilities (zod validation, mock posts, mood store)
-- `content/posts` — Placeholder content (can be replaced later)
+---
 
-## Testing
-- Jest + React Testing Library configured via `jest.config.cjs`
-- Add more tests under `src/**/__tests__`
+## 📂 Project Structure
 
-## Notes
-- Husky is configured via the `prepare` script, but installation requires running `npm install` once. If you want the pre-commit hook, run `npx husky install` after install.
-- Replace placeholder content and colors as needed.
+```text
+src/
+├── app/            # App Router pages and API routes
+├── components/     # Reusable UI components
+└── lib/            # Utilities and application logic
 
-## Deployment
-- Works out-of-the-box on Vercel or any Node hosting that supports Next.js. Build with `npm run build` and run with `npm start`.
+content/
+└── posts/          # Blog content
+```
 
 ---
 
-Brand
-- নাম: মনবন্ধু
-- ভাষা: বাংলা (প্রাথমিক), ইংরেজি (ঐচ্ছিক)
+## 🧪 Testing
 
-Privacy & Safety
-- ব্যক্তিগত ডাটা (মুড লগ) ডিভাইসে থাকে
-- ক্রাইসিস কন্টাক্ট দৃশ্যমান; “চিকিৎসা পরামর্শ নয়” ডিসক্লেইমার আছে
+The project uses **Jest** and **React Testing Library** for testing.
+
+Tests can be added under:
+
+```text
+src/**/__tests__
+```
+
+---
+
+## 🚀 Deployment
+
+MonBondhu is deployed with **Vercel** and can also be deployed to other Node.js hosting platforms that support Next.js.
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## 🔗 Relevant Links
+
+- 🌐 **Live Website:** https://mon-bondhu.vercel.app/
+- 💻 **GitHub Repository:** https://github.com/fjfahim74/MonBondhu
+
+---
+
+## 👨‍💻 Developer
+
+**Fatiuzzaman Fahim**
+
+- GitHub: https://github.com/fjfahim74
+- LinkedIn: https://www.linkedin.com/in/fjfahim74/
